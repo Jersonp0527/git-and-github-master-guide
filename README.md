@@ -57,3 +57,10 @@ git commit -m "Mensaje del commit"
 ```
 
 ## 5. Conectar el repositorio local a GitHub
+Ahora es el momento de conectar el repositorio local con GitHub. Para ello:
+1. Crea un nuevo repositorio en GitHub desde la interfaz web, sin seleccionar ninguna opción como "README" ni archivos .gitignore (será completamente vacío).
+2. Copia la URL del repositorio (será algo como https://github.com/usuario/nombre-repo.git).
+3. Luego, desde la consola, enlaza tu repositorio local con GitHub:
+```bash
+git remote add origin https://github.com/usuario/nombre-repo.git
+```
