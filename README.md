@@ -71,11 +71,11 @@ A partir de agosto de 2021, GitHub ya no permite la autenticación por contrase�
 Opción 1: Usar Token de Acceso Personal (PAT)
 1. Genera un token desde tu configuración de GitHub, seleccionando los permisos adecuados (mínimo repo).
 2. La primera vez que hagas git push, se te pedirá tu usuario y token:
-  - Usuario: tu nombre de usuario de GitHub.
-  - Contraseña: el token que generaste.
-  Git te pedirá que lo ingreses, pero puedes configurarlo para que no te lo pida cada vez usando:
-  ```bash
-  git config --global credential.helper store
-  ```
-  Esto almacena el token para futuras interacciones.
+    - Usuario: tu nombre de usuario de GitHub.
+    - Contraseña: el token que generaste.
+    Git te pedirá que lo ingreses, pero puedes configurarlo para que no te lo pida cada vez usando:
+    ```bash
+    git config --global credential.helper store
+    ```
+    Esto almacena el token para futuras interacciones.
 
