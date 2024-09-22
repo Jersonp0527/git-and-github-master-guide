@@ -64,3 +64,18 @@ Ahora es el momento de conectar el repositorio local con GitHub. Para ello:
 ```bash
 git remote add origin https://github.com/usuario/nombre-repo.git
 ```
+
+## 6. Autenticación con github
+A partir de agosto de 2021, GitHub ya no permite la autenticación por contraseña. Ahora debes usar un token de acceso personal (PAT) o SSH. Aquí te muestro cómo usar ambas opciones.
+
+Opción 1: Usar Token de Acceso Personal (PAT)
+1. Genera un token desde tu configuración de GitHub, seleccionando los permisos adecuados (mínimo repo).
+2. La primera vez que hagas git push, se te pedirá tu usuario y token:
+  - Usuario: tu nombre de usuario de GitHub.
+  - Contraseña: el token que generaste.
+  Git te pedirá que lo ingreses, pero puedes configurarlo para que no te lo pida cada vez usando:
+  ```bash
+  git config --global credential.helper store
+  ```
+  Esto almacena el token para futuras interacciones.
+
