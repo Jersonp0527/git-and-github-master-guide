@@ -38,17 +38,17 @@ git init
 Una vez que tienes archivos en tu proyecto, puedes agregar archivos al área de preparación (staging area) antes de confirmarlos (commit):
 1. Crea o añade archivos en tu directorio.
 2. Verifica el estado de los archivos no rastrados
-```bash
-git status
-```
+    ```bash
+    git status
+    ```
 3. Añade los archivos al área de preparación:
-```bash
-git add archivo.txt
-```
-O para añadir todos los archivos
-```bash
-git add .
-```
+    ```bash
+    git add archivo.txt
+    ```
+    O para añadir todos los archivos
+    ```bash
+    git add .
+    ```
 
 ## 4. Hacer un commit
 Una vez que los archivos están en el área de preparación, haz un commit para guardar los cambios:
@@ -61,14 +61,14 @@ Ahora es el momento de conectar el repositorio local con GitHub. Para ello:
 1. Crea un nuevo repositorio en GitHub desde la interfaz web, sin seleccionar ninguna opción como "README" ni archivos .gitignore (será completamente vacío).
 2. Copia la URL del repositorio (será algo como https://github.com/usuario/nombre-repo.git).
 3. Luego, desde la consola, enlaza tu repositorio local con GitHub:
-```bash
-git remote add origin https://github.com/usuario/nombre-repo.git
-```
+    ```bash
+    git remote add origin https://github.com/usuario/nombre-repo.git
+    ```
 
 ## 6. Autenticación con github
 A partir de agosto de 2021, GitHub ya no permite la autenticación por contraseña. Ahora debes usar un token de acceso personal (PAT) o SSH. Aquí te muestro cómo usar ambas opciones.
 
-Opción 1: Usar Token de Acceso Personal (PAT)
+**Usar Token de Acceso Personal (PAT)**
 1. Genera un token desde tu configuración de GitHub, seleccionando los permisos adecuados (mínimo repo).
 2. La primera vez que hagas git push, se te pedirá tu usuario y token:
     - Usuario: tu nombre de usuario de GitHub.
@@ -78,4 +78,34 @@ Opción 1: Usar Token de Acceso Personal (PAT)
     git config --global credential.helper store
     ```
     Esto almacena el token para futuras interacciones.
+
+## 7. Actualizar tu repositorio
+Cuando trabajas en equipo, otros pueden haber subido cambios al repositorio en GitHub. Para actualizar tu repositorio local:
+```bash
+git pull origin main
+```
+
+## 8. Gestionar ramas
+Las ramas te permiten trabajar en nuevas funcionalidades sin afectar el código principal. Aquí te explico cómo usarlas:
+1. Crear una nueva rama:
+    ```bash
+    git checkout -b nueva-rama
+    ```
+2. Cambiar a otra rama existente:
+    ```bash
+    git checkout main
+    ```
+3. Fusionar los cambios de una rama a otra:
+    ```bash
+    git merge nueva-rama
+    ```
+4. Eliminar una rama después de fusionarla:
+    ```bash
+    git branch -d nueva-rama
+    ```
+
+## Recomendaciones
+- Haz commits pequeños y descriptivos.
+- Utiliza ramas para trabajar en nuevas funcionalidades o bugs.
+- Mantén tu repositorio actualizado con *git pull* para evitar conflictos.
 
