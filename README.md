@@ -11,7 +11,6 @@ git config --global user.email "tu-email@example.com"
 Puedes verificar tu configuración con:
 ```bash
 git config --global --list
-
 ```
 > [!NOTE]
 > Para ejecutar esta linea de código se requiere *less* cómo dependencia, si no lo tienes instalado ejecuta:
@@ -107,5 +106,5 @@ Las ramas te permiten trabajar en nuevas funcionalidades sin afectar el código 
 ## Recomendaciones
 - Haz commits pequeños y descriptivos.
 - Utiliza ramas para trabajar en nuevas funcionalidades o bugs.
-- Mantén tu repositorio actualizado con *git pull* para evitar conflictos.
+- Mantén tu repositorio actualizado con `git pull` para evitar conflictos.
 
