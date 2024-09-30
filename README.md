@@ -108,3 +108,19 @@ Las ramas te permiten trabajar en nuevas funcionalidades sin afectar el código 
 - Utiliza ramas para trabajar en nuevas funcionalidades o bugs.
 - Mantén tu repositorio actualizado con `git pull` para evitar conflictos.
 
+# Extras
+
+## Eliminar una carpeta o archivo del repositorio
+1. **Eliminar el archivo:** Usa el siguiente comando para eliminar el archivo tanto del repositorio como de tu sistema local:
+    ```bash
+    git rm <nombre_del_archivo>
+    ```
+2. **Confirmar la eliminación:** Realiza un commit para registrar la eliminación:
+    ```bash
+    git commit -m "Eliminar archivo <nombre_del_archivo> del repositorio y localmente"
+    ```
+3. **Subir los cambios al repositorio remoto:** Sube los cambios a la rama correspondiente en el repositorio remoto con:
+    ```bash
+    git push origin <nombre_de_la_rama>
+    ```
+Esto eliminará el archivo tanto en tu máquina local como en el repositorio remoto.
